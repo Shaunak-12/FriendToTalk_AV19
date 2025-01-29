@@ -1,0 +1,65 @@
+// // .field mat-form-field{
+// //     border: 1px solid red;
+// //     // height: 30px !important;
+// // }
+
+// mat-form-field-appearance-outline {
+// border: 1px solid green;
+// }
+// mat-form-field-outline{
+// border:1px solid red
+// }
+
+
+// mat-form-field.mat-form-field-appearance-outline {
+//   height: 30px; /* Set the desired height */
+//   .mat-form-field-flex {
+//     height: 100%;
+//     align-items: center; 
+//   }
+
+//   .mat-form-field-outline {
+//     height: 100%;
+//     border: 1px solid red;
+
+//   }
+
+//   .mat-form-field-outline-start,
+//   .mat-form-field-outline-end {
+//     top: 0;
+//     bottom: 0;
+//     border: 1px solid red;
+
+//   }
+
+//   .mat-form-field-infix {
+//     height: 100%;
+//     padding: 0; 
+//     border: 1px solid red;
+
+//   }
+
+//   .mat-select-trigger {
+//     height: 100%;
+//     line-height: 30px; 
+//     border: 1px solid red;
+
+//   }
+// }
+
+
+:host ::ng-deep .mat-datepicker-toggle button.mat-icon-button {
+    background: transparent !important; /* No background on click */
+    box-shadow: none !important; /* No shadow on click */
+  }
+  
+  :host ::ng-deep .mat-datepicker-toggle button.mat-icon-button:focus,
+  :host ::ng-deep .mat-datepicker-toggle button.mat-icon-button:active {
+    background: transparent !important; /* No background on focus or active */
+    box-shadow: none !important; /* No shadow on focus or active */
+  }
+  
+  :host ::ng-deep .mat-datepicker-toggle button.mat-icon-button .mat-ripple-element {
+    display: none !important; /* Completely hide the ripple element */
+  }
+  
