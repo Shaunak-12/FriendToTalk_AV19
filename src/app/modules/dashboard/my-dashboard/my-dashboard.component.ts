@@ -131,6 +131,20 @@ export class MyDashboardComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+     // Added by shaunak to Set default dates for page load
+  this.currentQuery.StartDateTime = this.currentQuery.StartDateTime || this.maxDF;
+  this.currentQuery.EndDateTime = this.currentQuery.EndDateTime || this.maxDF;
+  this.GetDashboardCount();
+
+   // Added by shaunak to Set default dates for page load
+   this.currentQuery2.StartDateTime = this.currentQuery2.StartDateTime || this.maxDFM1;
+   this.currentQuery2.EndDateTime = this.currentQuery2.EndDateTime || this.maxDF;
+   this.GetDashboardChart();
+
+   this.currentQuery3.StartDateTime = this.currentQuery3.StartDateTime || this.maxDFM3;
+   this.currentQuery3.EndDateTime = this.currentQuery3.EndDateTime || this.maxDF;
+   this.getDashboardChart1();
+
     this.loaderSubscriber = this.apiservice.loaderService.loading$.subscribe((loading: any = {}) => {
       this.myDashboardLoading[0] = ('DashBoardCount' in loading) ? true : false;
       this.myDashboardLoading[1] = ('DashboardChart' in loading) ? true : false;
@@ -148,9 +162,9 @@ export class MyDashboardComponent implements OnInit, OnDestroy {
         this.UserinfoData[this.dIndex3.row][this.dIndex3.col].icon = ('reportDetails' in loading) ? 'Loading' : 'Download';
       }
     });
-    this.GetDashboardCount();
-    this.GetDashboardChart();
-    this.getDashboardChart1();
+    // this.GetDashboardCount();
+    // this.GetDashboardChart();
+    // this.getDashboardChart1();
   }
   setMaxDate(): void {
     this.maxDateM1 = new Date();
@@ -158,6 +172,10 @@ export class MyDashboardComponent implements OnInit, OnDestroy {
     console.log(this.maxDateM1); // Outputs the modified date
   }
   GetDashboardCount() {
+    //Added by shaunak to assign default dates if they are still null or undefined (just to be safe)
+  this.currentQuery.StartDateTime = this.currentQuery.StartDateTime || this.maxDF;
+  this.currentQuery.EndDateTime = this.currentQuery.EndDateTime || this.maxDF;
+
     this.apiSubscriber[0] = this.apiservice.sendRequest(config['getDashboardCount'], this.currentQuery, 'DashBoardCount').subscribe((data: any) => {
       this.dashboardCount[0].value = this.utilities.seperatorNum(data.NewRegisterCount);
       this.dashboardCount[1].value = this.utilities.seperatorNum(data.NewDepositorCount);
@@ -248,6 +266,10 @@ export class MyDashboardComponent implements OnInit, OnDestroy {
   }
 
   GetDashboardChart() {
+     //Added by shaunak to assign default dates if they are still null or undefined (just to be safe)
+     this.currentQuery2.StartDateTime = this.currentQuery2.StartDateTime || this.maxDFM1;
+     this.currentQuery2.EndDateTime = this.currentQuery2.EndDateTime || this.maxDF;
+
     this.apiSubscriber[1] = this.apiservice.sendRequest(config['getDashboardDepositChart'], this.currentQuery2, 'DashboardChart').subscribe((data: any) => {
       var deposit: any = [];
       var withdrawal: any = [];
@@ -374,6 +396,10 @@ export class MyDashboardComponent implements OnInit, OnDestroy {
     });
   }
   getDashboardChart1() {
+     //Added by shaunak to assign default dates if they are still null or undefined (just to be safe)
+     this.currentQuery3.StartDateTime = this.currentQuery3.StartDateTime || this.maxDFM3;
+     this.currentQuery3.EndDateTime = this.currentQuery3.EndDateTime || this.maxDF;
+     
     this.UserinfoData = []
     this.UserDataCollumns = [];
     this.AllUserinfo = [];
