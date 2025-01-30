@@ -42,49 +42,49 @@ export const routes: Routes = [
                 canActivateChild: [RoleauthGuard],
                 loadChildren: () => import('@modules/users/users.module').then(m => m.UsersModule)
             },
-            // {
-            //     path: 'bank',
-            //     canActivate: [RoleauthGuard],
-            //     canActivateChild: [RoleauthGuard],
-            //     loadChildren: () => import('@modules/bank/bank.module').then(m => m.BankModule)
-            // },
-            // {
-            //     path: 'report',
-            //     canActivate: [RoleauthGuard],
-            //     canActivateChild: [RoleauthGuard],
-            //     loadChildren: () => import('@modules/report/report.module').then(m => m.ReportModule)
-            // },
-            // {
-            //     path: 'creator',
-            //     canActivate: [RoleauthGuard],
-            //     canActivateChild: [RoleauthGuard],
-            //     loadChildren: () => import('@modules/creator/creator.module').then(m => m.CreatorModule)
-            // },
-            // {
-            //     path: 'promo',
-            //     canActivate: [RoleauthGuard],
-            //     canActivateChild: [RoleauthGuard],
-            //     loadChildren: () => import('@modules/promo/promo.module').then(m => m.PromoModule)
-            // },
-            // {
-            //     path:'crmissuetracker',
-            //     canActivate: [RoleauthGuard],
-            //     canActivateChild: [RoleauthGuard],
-            //     loadChildren: () => import('@modules/crm/crm.module').then(m => m.CrmModule)
-            // },
+            {
+                path: 'bank',
+                canActivate: [RoleauthGuard],
+                canActivateChild: [RoleauthGuard],
+                loadChildren: () => import('@modules/bank/bank.module').then(m => m.BankModule)
+            },
+            {
+                path: 'report',
+                canActivate: [RoleauthGuard],
+                canActivateChild: [RoleauthGuard],
+                loadChildren: () => import('@modules/report/report.module').then(m => m.ReportModule)
+            },
+            {
+                path: 'creator',
+                canActivate: [RoleauthGuard],
+                canActivateChild: [RoleauthGuard],
+                loadChildren: () => import('@modules/creator/creator.module').then(m => m.CreatorModule)
+            },
+            {
+                path: 'promo',
+                canActivate: [RoleauthGuard],
+                canActivateChild: [RoleauthGuard],
+                loadChildren: () => import('@modules/promo/promo.module').then(m => m.PromoModule)
+            },
+            {
+                path:'crmissuetracker',
+                canActivate: [RoleauthGuard],
+                canActivateChild: [RoleauthGuard],
+                loadChildren: () => import('@modules/crm/crm.module').then(m => m.CrmModule)
+            },
             {
                 path: 'viptemp',
                 canActivate: [RoleauthGuard],
                 canActivateChild: [RoleauthGuard],
                 loadChildren: () => import('@modules/viptemp/viptemp.module').then(m=>m.ViptempModule)
             }
-            // ,
-            // {
-            //     path: 'leads',
-            //     canActivate: [RoleauthGuard],
-            //     canActivateChild: [RoleauthGuard],
-            //     loadChildren: () => import('@modules/leads/leads.module').then(m=>m.LeadsModule)
-            // }
+            ,
+            {
+                path: 'leads',
+                canActivate: [RoleauthGuard],
+                canActivateChild: [RoleauthGuard],
+                loadChildren: () => import('@modules/leads/leads.module').then(m=>m.LeadsModule)
+            }
         ]
     },
     {

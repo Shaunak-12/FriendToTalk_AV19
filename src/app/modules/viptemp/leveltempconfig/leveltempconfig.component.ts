@@ -108,7 +108,7 @@ export class LeveltempconfigComponent implements OnInit {
     {value:'Edit',bg:'white-drop'}
   ]];
   dIndex={status:{row:0,col:0,use:false}}
-  UserDataCollumns=this.UserCollumnHeaders;
+  UserDataCollumns: any =this.UserCollumnHeaders;
   currentQuery={"SiteCode":sessionStorage.getItem('selectedSite'),"WalletTypeId":sessionStorage.getItem('WalChosen'),"TemplateId":''};
   private loaderSubscriber!: Subscription;
   private apiSubscriber: Subscription[]=[];
@@ -129,12 +129,15 @@ export class LeveltempconfigComponent implements OnInit {
     });
     this.apiSubscriber[0] = this.apiservice.getRequest(config['getAllTemplates']+"?SiteCode="+sessionStorage.getItem('selectedSite'), 'getAllTemplates').subscribe((data: any) => {
       this.allTmp=data;
+      console.log("this.allTmp:- ",this.allTmp);
+
       this.selWal({C0:this.currentQuery.WalletTypeId});
     }, (error) => {
       console.log(error);
     });
     this.apiSubscriber[0] = this.apiservice.getRequest(config['getAllLevels']+"?SiteCode="+sessionStorage.getItem('selectedSite'), 'getAllLevels').subscribe((data: any) => {
       this.allLev=data;
+      console.log("this.allLev:- ",this.allLev);
     }, (error) => {
       console.log(error);
     });
@@ -164,6 +167,7 @@ export class LeveltempconfigComponent implements OnInit {
     this.initializeData();
     this.apiSubscriber[0] = this.apiservice.sendRequest(config['getLvlTmpMap'],this.currentQuery, 'getLvlTmpMap').subscribe((data: any) => {
       this.AllRequestinfo=data;
+      console.log("this.AllRequestinfo:- ",this.AllRequestinfo)
       if(this.AllRequestinfo[0]){
         this.UserDataCollumns=this.UserCollumnHeaders;
         // this.pagesTotal=Math.ceil(this.AllRequestinfo[0].TotalCount/this.currentQuery.PageSize);

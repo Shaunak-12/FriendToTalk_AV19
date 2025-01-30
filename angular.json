@@ -29,7 +29,7 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },"src/favicon.ico"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
@@ -92,7 +92,7 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },"src/favicon.ico"
             ],
             "styles": [
               "src/styles.scss"

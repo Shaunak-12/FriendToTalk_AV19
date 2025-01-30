@@ -35,6 +35,7 @@
                 <mat-label>Sub Category Name</mat-label>
                 <mat-form-field style="width: 100%;" appearance="outline">
                     <mat-select formControlName="SubCategoryName">
+                        <mat-option value="">Select</mat-option>   
                         <ng-container *ngFor="let option of subCategory">
                             <mat-option [value]="option.SubCategoryName">{{option.SubCategoryName}}</mat-option>
                         </ng-container>

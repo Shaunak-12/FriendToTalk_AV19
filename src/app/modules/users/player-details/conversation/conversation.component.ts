@@ -147,6 +147,7 @@ export class ConversationComponent implements OnInit {
         if(data){
           this.addForm.controls['SubCategoryName'].setValue(data[0].SubCategoryName);
           this.subCategory = data;
+          console.log("this.subCategory:- ",this.subCategory);
         }
       },
       error:(error)=>{
