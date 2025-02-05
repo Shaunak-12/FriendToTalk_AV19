@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@use 'ngx-toastr/toastr';
+@use '@angular/material/prebuilt-themes/indigo-pink.css';
+
+// @import '@angular/material/prebuilt-themes/indigo-pink.css';
+// @import 'ngx-toastr/toastr';
 
 
 /* You can add global styles to this file, and also import other style files */
@@ -8,7 +12,6 @@
 /* Importing Bootstrap SCSS file. */
 // @import '~bootstrap/scss/bootstrap';
 // @import '~ngx-toastr/toastr';
-@import 'ngx-toastr/toastr';
 
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css');
@@ -421,4 +424,57 @@ html {
 }
 html .mat-mdc-progress-spinner .mdc-circular-progress__determinate-circle, .mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
   stroke: #1c84ee;
+}
+
+
+
+
+
+
+// mat-slide-toggle 
+
+
+html .mat-mdc-slide-toggle.mat-accent {
+  --mdc-switch-selected-focus-state-layer-color: #1c84ee; 
+  --mdc-switch-selected-handle-color: #1c84ee; 
+  --mdc-switch-selected-hover-state-layer-color: #1e71c5; 
+  --mdc-switch-selected-pressed-state-layer-color: #1c84ee; 
+  --mdc-switch-selected-focus-handle-color: #1c84ee; 
+  --mdc-switch-selected-hover-handle-color: #1e71c5; 
+  --mdc-switch-selected-pressed-handle-color: #1c84ee; 
+  --mdc-switch-selected-focus-track-color: #1c84ee; 
+  --mdc-switch-selected-hover-track-color: #1e71c5; 
+  --mdc-switch-selected-pressed-track-color: #1c84ee; 
+  --mdc-switch-selected-track-color: #1c84ee; 
+}
+
+html .mat-mdc-slide-toggle.mat-accent {
+ /* --mdc-switch-selected-focus-state-layer-color: #d81b60; */
+ /* --mdc-switch-selected-handle-color: #d81b60; */
+ /* --mdc-switch-selected-hover-state-layer-color: #d81b60; */
+ /* --mdc-switch-selected-pressed-state-layer-color: #d81b60; */
+ /* --mdc-switch-selected-focus-handle-color: #880e4f; */
+ /* --mdc-switch-selected-hover-handle-color: #880e4f; */
+ /* --mdc-switch-selected-pressed-handle-color: #880e4f; */
+ /* --mdc-switch-selected-focus-track-color: #f06292; */
+ /* --mdc-switch-selected-hover-track-color: #f06292; */
+ /* --mdc-switch-selected-pressed-track-color: #f06292; */
+ /* --mdc-switch-selected-track-color: #f06292; */
+}
+html .mat-accent {
+ /* --mdc-circular-progress-active-indicator-color: #ff4081; */
+}
+html .mat-accent {
+ /* --mat-slider-ripple-color: #ff4081; */
+ /* --mat-slider-hover-state-layer-color: rgba(255, 64, 129, 0.05); */
+ /* --mat-slider-focus-state-layer-color: rgba(255, 64, 129, 0.2); */
+}
+html .mat-accent {
+ /* --mdc-slider-handle-color: #ff4081; */
+ /* --mdc-slider-focus-handle-color: #ff4081; */
+ /* --mdc-slider-hover-handle-color: #ff4081; */
+ /* --mdc-slider-active-track-color: #ff4081; */
+ /* --mdc-slider-inactive-track-color: #ff4081; */
+ /* --mdc-slider-with-tick-marks-inactive-container-color: #ff4081; */
+ /* --mdc-slider-with-tick-marks-active-container-color: white; */
 }
