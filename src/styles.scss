@@ -114,52 +114,6 @@ hr {
 
 // }
 
-// for mat-formfield box 
-.mdc-notched-outline {
-  display: flex;
-  position: absolute;
-  // top: 0;
-  // right: 0;
-  // left: 0;
-  top: 10px !important;
-  left: 0px;
-  right: 0;
-  bottom: -4px !important;
-  box-sizing: border-box;
-  // width: 100%;
-  // max-width: 100%;
-  height: 58% !important;
-  // text-align: left;
-  pointer-events: none;
-}
-
-// for date calendar icon ripple
-// .mat-mdc-icon-button .mat-mdc-button-ripple, .mat-mdc-icon-button .mat-mdc-button-persistent-ripple, .mat-mdc-icon-button .mat-mdc-button-persistent-ripple::before {
-.mat-mdc-button-persistent-ripple::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* position: absolute; */
-  pointer-events: none;
-  border-radius: inherit;
-  box-shadow: none !important;
-  display: none;
- }
-:host ::ng-deep .mat-datepicker-toggle button.mat-icon-button {
-  background: none !important; /* Ensure no background on default state */
-  box-shadow: none !important; /* Ensure no shadow */
-}
-
-:host ::ng-deep .mat-datepicker-toggle button.mat-icon-button.mat-focus-indicator {
-  outline: none !important; /* Remove focus outline */
-  background: none !important; /* Remove background on focus */
-}
-
-:host ::ng-deep .mat-datepicker-toggle button.mat-icon-button:active {
-  background: none !important; /* Remove background on click */
-  box-shadow: none !important; /* Remove shadow on click */
-}
 
 // .mat-form-field-appearance-outline .mat-form-field-outline {
 //   display: flex;
@@ -319,6 +273,37 @@ mat-label {
 // }
 
 
+//   Added by shaunak
+
+// for date calendar icon ripple
+// .mat-mdc-icon-button .mat-mdc-button-ripple, .mat-mdc-icon-button .mat-mdc-button-persistent-ripple, .mat-mdc-icon-button .mat-mdc-button-persistent-ripple::before {
+  .mat-mdc-button-persistent-ripple::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* position: absolute; */
+    pointer-events: none;
+    border-radius: inherit;
+    box-shadow: none !important;
+    display: none;
+   }
+  :host ::ng-deep .mat-datepicker-toggle button.mat-icon-button {
+    background: none !important; /* Ensure no background on default state */
+    box-shadow: none !important; /* Ensure no shadow */
+  }
+  
+  :host ::ng-deep .mat-datepicker-toggle button.mat-icon-button.mat-focus-indicator {
+    outline: none !important; /* Remove focus outline */
+    background: none !important; /* Remove background on focus */
+  }
+  
+  :host ::ng-deep .mat-datepicker-toggle button.mat-icon-button:active {
+    background: none !important; /* Remove background on click */
+    box-shadow: none !important; /* Remove shadow on click */
+  }
+
+
 
 // For mat-toggle
 html .mat-mdc-slide-toggle.mat-accent {
@@ -429,11 +414,76 @@ html .mat-mdc-progress-spinner .mdc-circular-progress__determinate-circle, .mat-
 
 
 
+// For checkbox
+// mat-mdc-checkbox{
+//   --mdc-circular-progress-active-indicator-color: #1c84ee;
+// }
+
+// .mat-mdc-checkbox .mdc-checkbox__background {
+//   // background-color: #1c84ee !important; 
+//   // border: #1c84ee;
+// }
+
+.mat-mdc-checkbox .mdc-checkbox__checkmark {
+  // color: blue !important; 
+    background-color: #1c84ee !important; 
+    border: #1c84ee;
+    outline: #1c84ee;
+
+}
+
+html {
+  --mdc-checkbox-disabled-selected-icon-color: rgba(0, 0, 0, 0.38);
+  --mdc-checkbox-disabled-unselected-icon-color: rgba(0, 0, 0, 0.38);
+  --mdc-checkbox-selected-checkmark-color: white;
+  /* --mdc-checkbox-selected-focus-icon-color: #ff4081; */
+  --mdc-checkbox-selected-hover-icon-color: #1c84ee;
+  --mdc-checkbox-selected-icon-color: #1c84ee;
+  --mdc-checkbox-selected-pressed-icon-color: #1c84ee;
+  --mdc-checkbox-unselected-focus-icon-color: #212121;
+  --mdc-checkbox-unselected-hover-icon-color: #212121;
+  --mdc-checkbox-unselected-icon-color: rgba(0, 0, 0, 0.54);
+  --mdc-checkbox-selected-focus-state-layer-color: #1c84ee;
+  --mdc-checkbox-selected-hover-state-layer-color: #1c84ee;
+  --mdc-checkbox-selected-pressed-state-layer-color: #1c84ee;
+  --mdc-checkbox-unselected-focus-state-layer-color: black;
+  --mdc-checkbox-unselected-hover-state-layer-color: black;
+  --mdc-checkbox-unselected-pressed-state-layer-color: black;
+}
+html {
+  --mdc-checkbox-disabled-selected-checkmark-color: #fff;
+  --mdc-checkbox-selected-focus-state-layer-opacity: 0.16;
+  --mdc-checkbox-selected-hover-state-layer-opacity: 0.04;
+  --mdc-checkbox-selected-pressed-state-layer-opacity: 0.16;
+  --mdc-checkbox-unselected-focus-state-layer-opacity: 0.16;
+  --mdc-checkbox-unselected-hover-state-layer-opacity: 0.04;
+  --mdc-checkbox-unselected-pressed-state-layer-opacity: 0.16;
+}
+
+/* Change the border and background color when checked */
+// .mat-mdc-checkbox::part(control) {
+//   --mdc-checkbox-unchecked-border-color: blue; /* Border color for unchecked state */
+//   --mdc-checkbox-checked-color: blue; /* Background and tick color for checked state */
+//   --mdc-checkbox-unchecked-hover-color: blue; /* Hover border for unchecked state */
+//   --mdc-checkbox-unchecked-focus-color: blue; /* Focus border for unchecked state */
+// }
+
+// /* Change ripple effect color */
+// .mat-mdc-checkbox::part(ripple) {
+//   background-color: rgba(0, 0, 255, 0.2); /* Light blue ripple effect */
+// }
+
+
+
+// .mr-toprem {
+//   margin-top: 0rem !important;
+// }
+
+
+
 
 
 // mat-slide-toggle 
-
-
 html .mat-mdc-slide-toggle.mat-accent {
   --mdc-switch-selected-focus-state-layer-color: #1c84ee; 
   --mdc-switch-selected-handle-color: #1c84ee; 
@@ -478,3 +528,254 @@ html .mat-accent {
  /* --mdc-slider-with-tick-marks-inactive-container-color: #ff4081; */
  /* --mdc-slider-with-tick-marks-active-container-color: white; */
 }
+
+
+
+/* for date calendar svg icon */
+.mat-mdc-icon-button img, .mat-mdc-icon-button svg {
+  width: var(--mdc-icon-button-icon-size, 24px);
+  height: var(--mdc-icon-button-icon-size, 24px);
+  vertical-align: baseline;
+  color: grey !important;
+}
+
+
+
+/* for positioning mat-select-panel */
+div.mat-mdc-select-panel {
+  width: 100%;
+  outline: 0;
+  padding: 8px 0;
+  border-radius: 4px !important;
+  box-sizing: border-box;
+  // color: rgb(238, 238, 238) !important;
+  // background-color: rgb(34, 40, 47) !important;
+  position: absolute !important;
+  top: -47px !important;
+  border-radius: 4px;
+}
+
+
+.mat-mdc-option .mdc-list-item__primary-text {
+  color: rgb(7, 3, 3) !important;
+}
+
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) .mdc-list-item__primary-text {
+  // color: rgb(238, 238, 238) !important;
+  color: blue !important;
+}
+
+
+.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after, .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-indeterminate::after {
+  // color: rgb(238, 238, 238) !important;
+  color: blue !important;
+
+}
+
+.sd-dark .mat-mdc-checkbox label {
+  cursor: pointer;
+  color: #eee !important;
+}
+
+.sd-dark .mdc-checkbox__background {
+  display: inline-flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #eee !important;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  will-change: background-color, border-color;
+  transition: background-color 90mscubic-bezier(0.4, 0, 0.6, 1), border-color 90mscubic-bezier(0.4, 0, 0.6, 1);
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  /* border-color: var(--mdc-checkbox-unselected-icon-color, var(--mat-sys-on-surface-variant)); */
+  top: calc((var(--mdc-checkbox-state-layer-size, 40px) - 18px) / 2);
+  left: calc((var(--mdc-checkbox-state-layer-size, 40px) - 18px) / 2);
+}
+
+.sd-dark input::placeholder {
+  color: white !important;
+  opacity: 1;
+  font-size: 13px !important;
+
+}
+input::placeholder {
+  font-size: 13px !important;
+} 
+
+
+
+// for players add conversation
+.sd-dark .container[_ngcontent-ng-c3321596602] {
+  padding: 20px;
+  background-color: #374552;
+  color: #eee;
+}
+
+// for players add promo
+.sd-dark .container[_ngcontent-ng-c2122130660] {
+  padding: 20px;
+  background-color: #374552;
+  color: #eee;
+}
+
+// for adminmaster add button
+.sd-dark .popupCard[_ngcontent-ng-c1523614649] {
+  position: relative;
+  padding: 1rem;
+  background-color: #374552;
+  color: #eee;
+}
+
+// for call request reset call
+.sd-dark .popupCard[_ngcontent-ng-c2804620794] {
+  position: relative;
+  padding: 1rem;
+  background-color: #374552;
+  color: #eee;
+}
+
+// for withdraw request reject button
+.sd-dark .container[_ngcontent-ng-c714370113] {
+  padding: 20px;
+  background-color: #374552;
+  color: #eee;
+}
+
+// for withdraw request reject button normal mode
+.mat-mdc-dialog-surface {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+  outline: 0;
+  transform: scale(0.8);
+  transition: transform var(--mat-dialog-transition-duration, 0ms)cubic-bezier(0, 0, 0.2, 1);
+  max-height: inherit;
+  min-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  box-shadow: var(--mat-dialog-container-elevation-shadow, none);
+  border-radius: var(--mdc-dialog-container-shape, var(--mat-sys-corner-extra-large, 4px));
+  background-color: var(--mdc-dialog-container-color, var(--mat-sys-surface, white));
+  padding: 20px;
+}
+
+// for withdraw request reject button Dark mode
+.sd-dark .mat-mdc-dialog-surface {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+  outline: 0;
+  transform: scale(0.8);
+  transition: transform var(--mat-dialog-transition-duration, 0ms)cubic-bezier(0, 0, 0.2, 1);
+  max-height: inherit;
+  min-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  box-shadow: var(--mat-dialog-container-elevation-shadow, none);
+  border-radius: var(--mdc-dialog-container-shape, var(--mat-sys-corner-extra-large, 4px));
+  // background-color: var(--mdc-dialog-container-color, var(--mat-sys-surface, white));
+  padding: 20px;
+  background-color: #374552;
+  color: #eee;
+}
+
+// for report new-users complete popup
+.sd-dark .popupCard[_ngcontent-ng-c2725595756] {
+  position: relative;
+  padding: 1rem;
+  background-color: #374552;
+  color: #eee;
+}
+
+
+
+
+.mat-mdc-select {
+  display: inline-block;
+  width: 100%;
+  outline: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: var(--mat-select-enabled-trigger-text-color, var(--mat-sys-on-surface));
+  font-family: var(--mat-select-trigger-text-font, var(--mat-sys-body-large-font));
+  line-height: var(--mat-select-trigger-text-line-height, var(--mat-sys-body-large-line-height));
+  font-size: 13px !important;
+  font-weight: var(--mat-select-trigger-text-weight, var(--mat-sys-body-large-weight));
+  letter-spacing: var(--mat-select-trigger-text-tracking, var(--mat-sys-body-large-tracking));
+}
+
+// for mat-formfield box 
+.mdc-notched-outline {
+  display: flex;
+  position: absolute;
+  // top: 0;
+  // right: 0;
+  // left: 0;
+  top: 10px !important;
+  left: 0px;
+  right: 0;
+  bottom: -4px !important;
+  box-sizing: border-box;
+  // width: 100%;
+  // max-width: 100%;
+  height: 59% !important;
+  // text-align: left;
+  pointer-events: none;
+
+  border-radius: 4px;
+
+}
+
+
+.mat-date-range-input-inner {
+  font-size: 13px !important;
+}
+
+// for date picker DATE
+.sd-dark .mat-mdc-button .mdc-button__label, .mat-mdc-button .mat-icon, .mat-mdc-unelevated-button .mdc-button__label, .mat-mdc-unelevated-button .mat-icon, .mat-mdc-raised-button .mdc-button__label, .mat-mdc-raised-button .mat-icon, .mat-mdc-outlined-button .mdc-button__label, .mat-mdc-outlined-button .mat-icon {
+  z-index: 1;
+  position: relative;
+  color: #eee;
+}
+
+// for date picker DAYS
+.sd-dark .mat-calendar-table-header th {
+  text-align: center;
+  padding: 0 0 8px 0;
+  font-size: var(--mat-datepicker-calendar-header-text-size, var(--mat-sys-title-small-size));
+  font-weight: var(--mat-datepicker-calendar-header-text-weight, var(--mat-sys-title-small-weight));
+  color: #eee;
+
+}
+.sd-dark .mat-mdc-icon-button svg {
+  width: var(--mdc-icon-button-icon-size, 24px);
+  height: var(--mdc-icon-button-icon-size, 24px);
+  vertical-align: baseline;
+  color: #eee !important;
+}
+
+// for players view
+.sd-dark .mat-mdc-tab .mdc-tab__text-label {
+ color: #eee !important;
+  display: inline-flex;
+  align-items: center;
+}
+

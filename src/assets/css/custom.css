@@ -444,3 +444,212 @@
 .sd-dark .mat-expansion-indicator::after {
     color: #eee !important;
 }
+
+
+
+
+
+/* Below css added by shaunak */
+
+/* .sd-dark .mat-mdc-form-field.mat-mdc-form-field-type-mat-input .mdc-notched-outline {
+    border-color: rgb(117, 122, 125) !important;
+    background-color: #27313a !important;
+} */
+
+/* .mdc-text-field--outlined .mdc-notched-outline {
+    z-index: 1 !important;
+} */
+
+.sd-dark .mdc-notched-outline {
+    z-index: 0 !important;
+}
+
+.sd-dark .mdc-notched-outline {
+    display: flex;
+    position: absolute;
+    top: 10px !important;
+    left: 0px;
+    right: 0;
+    bottom: -4px !important;
+    box-sizing: border-box;
+    height: 58% !important;
+    /* width: 95% !important; */
+    pointer-events: none;
+    background-color: #27313a !important;
+    /* color: #eee !important; */
+    border-radius: 4px !important;
+}
+
+
+
+/* .sd-dark .mat-mdc-text-field-wrapper {
+    color: #eee !important;
+    background-color: #27313a !important; 
+}
+
+.sd-dark .mat-mdc-form-field {
+    --mdc-filled-text-field-container-color: #27313a !important;
+    --mdc-filled-text-field-input-text-color: #eee !important;
+    
+} */
+
+/* Apply styles to the outer container */
+.sd-dark .mat-mdc-form-field {
+    --mdc-filled-text-field-container-color: #27313a !important;
+    /* Background inside the field */
+    --mdc-filled-text-field-input-text-color: rgb(238, 238, 238) !important;
+    /* Text color */
+    --mdc-filled-text-field-label-text-color: rgb(238, 238, 238) !important;
+    /* Label color */
+    --mdc-filled-text-field-focus-label-text-color: rgb(238, 238, 238) !important;
+    /* Focused label color */
+    --mdc-filled-text-field-caret-color: rgb(238, 238, 238) !important;
+    /* Cursor color */
+    --mdc-filled-text-field-placeholder-text-color: rgb(238, 238, 238) !important;
+    /* Placeholder text color */
+}
+
+/* Apply styles inside the field */
+.sd-dark .mat-mdc-text-field-wrapper {
+    /* background-color: #27313a !important; */
+}
+
+.sd-dark .mat-mdc-form-field .mat-mdc-text-field-wrapper {
+    color: #eee !important;
+}
+
+/* Target the input text inside the field */
+.sd-dark .mat-mdc-input-element {
+    color: rgb(238, 238, 238) !important;
+}
+
+/* Change the underline color */
+.sd-dark .mat-mdc-form-field:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
+    border-bottom-color: 1px solid white !important;
+}
+
+/* Apply styles to the outer container */
+.sd-dark .mat-mdc-form-field {
+    --mdc-outlined-text-field-outline-color: rgb(117, 122, 125) !important;
+    /* Default outline */
+    --mdc-outlined-text-field-outline-width: 1px !important;
+    /* Outline thickness */
+    --mdc-outlined-text-field-container-color: #27313a !important;
+    /* Background color inside the field */
+    --mdc-outlined-text-field-label-text-color: rgb(238, 238, 238) !important;
+    /* Label color */
+    --mdc-outlined-text-field-focus-outline-color: rgb(117, 122, 125) !important;
+    /* Focused outline color */
+}
+
+/* Style the outlined form field */
+.sd-dark .mat-mdc-form-field.mat-mdc-form-field-type-mat-input .mdc-notched-outline {
+    /* border-color: gainsboro !important;  */
+    border-color: rgb(117, 122, 125) !important;
+}
+
+/* Style outline when focused */
+.sd-dark .mat-mdc-form-field.mat-mdc-form-field-type-mat-input .mdc-notched-outline--notched {
+    /* border-color: white !important; */
+    border-color: rgb(117, 122, 125) !important;
+}
+
+/* for mat-select field */
+.sd-dark .mat-mdc-select {
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--mat-select-trigger-text-font, var(--mat-sys-body-large-font));
+    line-height: var(--mat-select-trigger-text-line-height, var(--mat-sys-body-large-line-height));
+    font-size: var(--mat-select-trigger-text-size, var(--mat-sys-body-large-size));
+    font-weight: var(--mat-select-trigger-text-weight, var(--mat-sys-body-large-weight));
+    letter-spacing: var(--mat-select-trigger-text-tracking, var(--mat-sys-body-large-tracking));
+
+    color: rgb(238, 238, 238) !important;
+}
+
+/* for mat-select down dropdown svg icon*/
+.sd-dark .mat-mdc-select-arrow svg {
+    fill: currentColor;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(238, 238, 238) !important;
+}
+
+/* for date calendar svg icon */
+.sd-dark .mat-mdc-icon-button img,
+.mat-mdc-icon-button svg {
+    width: var(--mdc-icon-button-icon-size, 24px);
+    height: var(--mdc-icon-button-icon-size, 24px);
+    vertical-align: baseline;
+    color: rgb(238, 238, 238) !important;
+}
+
+.sd-dark .mat-mdc-option:focus.mdc-list-item,
+.mat-mdc-option.mat-mdc-option-active.mdc-list-item {
+    outline: 0;
+}
+
+/* for mat-option */
+.sd-dark .mat-mdc-option {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 16px;
+    flex-direction: row;
+}
+
+.sd-dark .mat-mdc-option {
+    transform-origin: 50% 18.1952px 0px;
+    font-size: 12px;
+    opacity: 1;
+    min-width: calc(100%);
+    transform: scaleY(1);
+    border-radius: 4px !important;
+}
+
+/* for positioning mat-select-panel */
+.sd-dark div.mat-mdc-select-panel {
+    width: 100%;
+    outline: 0;
+    padding: 8px 0;
+    border-radius: 4px !important;
+    box-sizing: border-box;
+    color: rgb(238, 238, 238) !important;
+    background-color: rgb(34, 40, 47) !important;
+    position: absolute !important;
+    top: -47px !important;
+    border-radius: 4px;
+}
+
+.sd-dark .mat-mdc-option.mat-mdc-option-active.mdc-list-item {
+    background: #2592ff !important;
+    color: rgb(238, 238, 238) !important;
+    outline: 0;
+    height: 9px;
+}
+
+.sd-dark .mat-mdc-option .mdc-list-item__primary-text {
+    color: rgb(238, 238, 238) !important;
+}
+
+.sd-dark .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) .mdc-list-item__primary-text {
+    color: rgb(238, 238, 238) !important;
+}
+
+.sd-dark .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after,
+.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-indeterminate::after {
+    color: rgb(238, 238, 238) !important;
+}
+
+
+/* added by shauank */
+.sd-dark .customMat {
+    background-color: transparent !important;
+    border: 1px solid rgb(117, 122, 125) !important;
+}
+
